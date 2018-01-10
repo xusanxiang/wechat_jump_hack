@@ -10,7 +10,7 @@ import java.util.Random;
 public class Hack {
 
 
-    static final String ADB_PATH = "/Users/chenliang/Library/Android/sdk/platform-tools/adb";
+    static final String ADB_PATH = "adb";
 
     /**
      * 弹跳系数，现在已经会自动适应各种屏幕，请不要修改。
@@ -73,13 +73,18 @@ public class Hack {
                             }
                         }
                         System.out.println("find nextCenter, succ, (" + centerX + ", " + centerY + ")");
+
                         int distance = (int) (Math.sqrt((centerX - myPos[0]) * (centerX - myPos[0]) + (centerY - myPos[1]) * (centerY - myPos[1])) * jumpRatio);
+                        //距离为后点距离，稍减准确些
+                        distance -= 20;
                         System.out.println("distance: " + distance);
                         int pressX = 400 + RANDOM.nextInt(100);
                         int pressY = 500 + RANDOM.nextInt(100);
                         String adbCommand = ADB_PATH + String.format(" shell input swipe %d %d %d %d %d", pressX, pressY, pressX, pressY, distance);
                         System.out.println(adbCommand);
-                        Runtime.getRuntime().exec(adbCommand);
+                        //线程等待执行完毕
+                        Process adbPressProcess = Runtime.getRuntime().exec(adbCommand);
+                        adbPressProcess.waitFor();
                     }
                 } else {
                     System.err.println("find myPos, fail");

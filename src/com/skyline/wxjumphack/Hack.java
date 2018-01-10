@@ -4,9 +4,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.Random;
 
-/**
- * Created by chenliang on 2018/1/1.
- */
+
 public class Hack {
 
 
@@ -96,7 +94,7 @@ public class Hack {
             }
             try {
                 // sleep 随机时间，防止上传不了成绩
-                Thread.sleep(4_000 + RANDOM.nextInt(3000));
+                Thread.sleep(1000 + RANDOM.nextInt(200000));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

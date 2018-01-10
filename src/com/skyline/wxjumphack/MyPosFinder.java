@@ -5,9 +5,6 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-/**
- * Created by chenliang on 2017/12/31.
- */
 public class MyPosFinder {
 
     public static final int R_TARGET = 40;

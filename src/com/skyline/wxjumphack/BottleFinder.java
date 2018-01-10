@@ -4,10 +4,6 @@ import java.awt.image.BufferedImage;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
-/**
- * 瓶子的下一步位置计算
- * Created by chenliang on 2017/12/31.
- */
 public class BottleFinder {
 
     public static final int TARGET = 255;

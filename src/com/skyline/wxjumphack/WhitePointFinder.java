@@ -4,9 +4,6 @@ import java.awt.image.BufferedImage;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
-/**
- * Created by chenliang on 2017/12/31.
- */
 public class WhitePointFinder {
 
     public static final int TARGET = 245;

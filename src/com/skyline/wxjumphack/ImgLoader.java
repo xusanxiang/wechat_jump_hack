@@ -7,9 +7,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-/**
- * Created by chenliang on 2017/12/31.
- */
 public class ImgLoader {
 
     public static BufferedImage load(String path) throws IOException {

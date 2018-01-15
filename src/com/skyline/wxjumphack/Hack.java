@@ -94,7 +94,7 @@ public class Hack {
             }
             try {
                 // sleep 随机时间，防止上传不了成绩
-                Thread.sleep(1000 + RANDOM.nextInt(200000));
+                Thread.sleep(1000 + RANDOM.nextInt(5000));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

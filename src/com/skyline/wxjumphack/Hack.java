@@ -29,7 +29,7 @@ public class Hack {
         int total = 0;
         int centerHit = 0;
         double jumpRatio = 0;
-        for (int i = 0; i < 5000; i++) {
+        for (int i = 0; i < 100; i++) {
             try {
                 total++;
                 File file = new File(srcDir, i + ".png");
@@ -94,7 +94,7 @@ public class Hack {
             }
             try {
                 // sleep 随机时间，防止上传不了成绩
-                Thread.sleep(1000 + RANDOM.nextInt(5000));
+                Thread.sleep(1000 + RANDOM.nextInt(4000));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
